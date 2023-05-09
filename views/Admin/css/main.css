@@ -1,0 +1,218 @@
+/* Variables */
+
+:root{
+    --main-color: #16558f;
+    --secondary-color: #b8e3ff;
+}
+
+/* Global Rules */
+
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+}
+.parent {
+    background-color: #eee;
+}
+.container1 {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 15px;
+}
+.special-heading1 {
+    color: var(--main-color);
+    font-size: 55px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0px;
+}
+
+
+/* media queries */
+
+/* v.small */
+
+@media (max-width: 767px) {
+    .special-heading1 {
+        font-size: 60px;
+    }
+    .special-heading1 + p {
+        margin-top: -20px;
+    }
+}
+
+/* small */
+
+@media (min-width: 768px) {
+    .container1 {
+        width: 750px;
+    }
+}
+
+/* medium */
+
+@media (min-width: 992px) {
+    .container1 {
+        width: 970px;
+    }
+}
+
+/* large */
+
+@media (min-width: 1200px) {
+    .container1 {
+        width: 1170px;
+    }
+}
+
+/* main */
+
+.landing {
+    background-image: url(../img/developer.png);
+    background-size: cover;
+    height: calc(70vh + 165px);
+    position: relative;
+}
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    
+    text-shadow: 2px 2px 5px navy;
+}
+.landing .intro-text h1 {
+    margin: 0px;
+    font-size: 490%;
+    -webkit-text-stroke: 4px navy;
+}
+.landing .intro-text h4 {
+    font-size: 45px;
+    -webkit-text-stroke: 2px navy;
+}
+.features {
+    padding: 60px 0px;
+    background-color: #f6f6f6;
+}
+.features .container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.features .feat {
+    padding: 60px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}
+.features .feat i {
+    color: var(--main-color);
+    font-size: 50px;
+}
+.features .feat h3 {
+    color: #000000;
+    font-weight: 500;
+    margin: 30px 0px;
+}
+.features .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+}
+.services {
+    padding: 60px 0px;
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 100px;
+}
+.services .services-content .srv {
+    display: flex;
+    margin: 40px 0px;
+    height: 35%;
+}
+.services .services-content .srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+    font-size: 35px;
+}
+.services .services-content .srv .text {
+    font-weight: 300;
+    color: #444;
+    line-height: 1.6;
+    flex: 1;
+}
+.services .services-content .srv .text h3 {
+    margin-top: 0px;
+}
+.services .services-content .image {
+    position: relative;
+}
+@media (max-width: 1199px) {
+    .services .services-content .image{
+        display: none;
+    }
+}
+.about {
+    padding: 50px 0px;
+    background-color: #f6f6f6;
+}
+.about .about-content {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about .about-content .image {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+.about .about-content .image img {
+    width: 100%;
+}
+.about .about-content .text {
+    flex-basis: 55%;
+    color: black;
+    /* padding-left: 50px; */
+}
+@media (max-width: 991px) {
+    .about .about-content .text {
+        padding-left: 0px;
+        flex-basis: 100%;
+    }
+}
+.about .about-content .text p:first-child {
+    font-weight: bold;
+    margin-bottom: 50px;
+    line-height: 2;
+}
+.about .about-content .text hr {
+    width: 50%;
+    border-color: var(--main-color);
+}
+.about .about-content .text p:last-child {
+    line-height: 2;
+    margin-top: 30px;
+}
